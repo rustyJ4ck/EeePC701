@@ -26,6 +26,9 @@ BIOS 1006.1:
 		panel 5 - SSC+  96M N, pwm 22K
 		panel 6 - SSC+  96M N, pwm 200
 
+>>
+>> https://youtu.be/CXM0QcKwN7g
+>>
 
 >> 
 >> Based on 'truesata.rom' bios (1006 EEEPC900 adaptation)
