@@ -1,0 +1,73 @@
+EeePc701 GNU/Linux 5.10.1888-antix.1.486-smp
+
+$ sudo dmesg | fgrep NCQ
+ ata1.00: 250069680 sectors, multi 8: LBA48 NCQ (depth 32), AA
+
+$ sudo dmesg | fgrep AHCI
+ ahci 0000:00:1f.2: AHCI 0001.0000 32 slots 4 ports 1.5 Gbps 0x5 impl SATA mode
+  
+$ sudo lspci -v -s 0:1F.2
+ 00:1f.2 SATA controller: Intel Corporation 82801FBM (ICH6M) SATA Controller (rev 04) (prog-if 01 [AHCI 1.0])
+ Subsystem: ASUSTeK Computer Inc. 82801FBM (ICH6M) SATA Controller
+ Kernel driver in use: ahci
+
+$ sudo dmesg | fgrep ATA
+ ahci 0000:00:1f.2: AHCI 0001.0000 32 slots 4 ports 1.5 Gbps 0x5 impl SATA mode
+ ata1: SATA max UDMA/133 abar m1024@0xf7eb7800 port 0xf7eb7900 irq 19
+ ata3: SATA max UDMA/133 abar m1024@0xf7eb7800 port 0xf7eb7a00 irq 19
+ ata5: PATA max UDMA/100 cmd 0x1f0 ctl 0x3f6 bmdma 0xffa0 irq 14
+ ata6: PATA max UDMA/100 cmd 0x170 ctl 0x376 bmdma 0xffa8 irq 15
+ ata3: SATA link down (SStatus 0 SControl 300)
+ ata1: SATA link up 1.5 Gbps (SStatus 113 SControl 300)
+ ata1.00: ATA-11: P3-128, HT3B22A3, max UDMA/133
+ scsi 0:0:0:0: Direct-Access     ATA      P3-128           22A3 PQ: 0 ANSI: 5
+ scsi 4:0:0:0: Direct-Access     ATA      SILICONMOTION SM n/a  PQ: 0 ANSI: 5
+
+
+
+# benchmarks
+
+$ dd if=/dev/zero of=/mnt/data/tmp/bench.tmp bs=8M count=1024
+8589934592 bytes (8.6 GB, 8.0 GiB) copied, 65.2732 s, 132 MB/s
+
+$ dd of=/dev/null if=/mnt/data/tmp/bench.tmp bs=8M count=1024
+8589934592 bytes (8.6 GB, 8.0 GiB) copied, 62.7854 s, 137 MB/s
+
+
+
+$ lspci -vvvxxx -s 0:1f.2
+00:1f.2 SATA controller: Intel Corporation 82801FBM (ICH6M) SATA Controller (rev 04) (prog-if 01 [AHCI 1.0])
+	Subsystem: ASUSTeK Computer Inc. 82801FBM (ICH6M) SATA Controller
+	Control: I/O+ Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx-
+	Status: Cap+ 66MHz+ UDF- FastB2B+ ParErr- DEVSEL=medium >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0
+	Interrupt: pin B routed to IRQ 19
+	Region 0: I/O ports at e080 [size=8]
+	Region 1: I/O ports at e000 [size=4]
+	Region 2: I/O ports at dc00 [size=8]
+	Region 3: I/O ports at d880 [size=4]
+	Region 4: I/O ports at d800 [size=16]
+	Region 5: Memory at f7eb7800 (32-bit, non-prefetchable) [size=1K]
+	Capabilities: [70] Power Management version 2
+		Flags: PMEClk- DSI- D1- D2- AuxCurrent=0mA PME(D0-,D1-,D2-,D3hot+,D3cold-)
+		Status: D0 NoSoftRst- PME-Enable- DSel=0 DScale=0 PME-
+	Kernel driver in use: ahci
+
+	 0	1  2  3  4  5  6  7  8  9  A  B  C  D  E  F
+00: 86 80 53 26 07 00 b0 02 04 01 06 01 00 00 00 00
+10: 81 e0 00 00 01 e0 00 00 01 dc 00 00 81 d8 00 00
+20: 01 d8 00 00 00 78 eb f7 00 00 00 00 43 10 06 26
+30: 00 00 00 00 70 00 00 00 00 00 00 00 07 02 00 00
+40: 07 a3 00 80 00 00 00 00 01 00 01 00 00 00 00 00
+50: 00 00 00 00 30 10 00 00 00 00 00 00 00 00 00 00
+60: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+70: 01 00 02 40 00 00 00 00 00 00 00 00 00 00 00 00
+80: 05 70 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+90: 80 00 15 0f 82 01 c0 0a 00 00 00 00 00 00 00 00
+a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+c0: 00 00 00 00 05 00 00 00 00 00 00 00 00 00 00 00
+d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+f0: 00 00 00 00 00 00 00 00 80 0f 04 00 00 00 00 00
+

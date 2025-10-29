@@ -1,0 +1,17 @@
+Path = g:\windows\system32\drivers\iaStor.sys
+Physical Size = 331288
+CPU = x86
+Created = 2010-04-05 19:21:02
+Name = iaStor.sys
+FileVersion: 8.9.8.1005
+ProductVersion: 8.9.8.1005
+Comments: -ia32
+CompanyName: Intel Corporation
+FileDescription: Intel Matrix Storage Manager driver - ia32
+InternalName: iaStor.sys
+LegalCopyright: Copyright(C) Intel Corporation 1994-2010 
+LegalTrademarks: 
+OriginalFilename: iaStor.sys
+PrivateBuild: 
+ProductName: Intel Matrix Storage Manager driver
+SpecialBuild: 

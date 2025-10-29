@@ -1,0 +1,312 @@
+
+1:0001  MENUITEM ("Main")
+    2:0002  STATICTEXT ("BIOS SETUP UTILITY")
+    2:0003  STATICTEXT ("System Overview")
+    2:0004  SEPARATOR //single line
+    2:0005  STATICTEXT ("ASUS 701 BIOS 1006.1")
+    2:0006  DYNAMICTEXT ("Core Version: ")
+    2:0007  DYNAMICTEXT ("Build Date: ")
+    2:0008  DYNAMICTEXT ("EC Firmware Version:")
+    2:0009  SEPARATOR //blank line
+    2:0010  STATICTEXT ("Processor")
+    2:0011  DYNAMICTEXT ("Type      : ")
+    2:0012  DYNAMICTEXT ("Count     : ")
+    2:0013  SEPARATOR //blank line
+    2:0014  STATICTEXT ("System Memory")
+    2:0015  DYNAMICTEXT ("Installed Size: ")
+    2:0016  SEPARATOR //blank line
+    2:0017  TIMECONTROL ("System Time")
+    2:0018  DATECONTROL ("System Date")
+
+
+1:0019  MENUITEM ("Advanced")
+    2:0020  STATICTEXT ("BIOS SETUP UTILITY")
+    2:0021  STATICTEXT ("Advanced Settings")
+    2:0022  SEPARATOR //single line
+    2:0023  MENUITEM ("Advanced Chipset Settings")
+        3:0024  STATICTEXT ("BIOS SETUP UTILITY")
+        3:0025  STATICTEXT ("Advanced Chipset Settings")
+        3:0026  SEPARATOR //single line
+        3:0027  MENUITEM ("Configure advanced CPU settings")
+            4:0028  STATICTEXT ("BIOS SETUP UTILITY")
+            4:0029  STATICTEXT ("Configure advanced CPU settings")
+            4:0030  DYNAMICTEXT ("Module Version:")
+            4:0031  SEPARATOR //single line
+            4:0032  DYNAMICTEXT ("Manufacturer:")
+            4:0033  DYNAMICTEXT ("Brand String:")
+            4:0034  DYNAMICTEXT ("Frequency   :")
+            4:0035  DYNAMICTEXT ("FSB Speed   :")
+            4:0036  DYNAMICTEXT ("Cache L1    :")
+            4:0037  DYNAMICTEXT ("Cache L2    :")
+            4:0038  DYNAMICTEXT ("CPUID       :")
+            4:0039  SEPARATOR //blank line
+            4:0040  QUESTION ("CPU ratio adjustment")
+            4:0041  INTEGERCONTROL ("  Ratio CMOS Setting:")
+            4:0042  QUESTION ("C1E Support")
+            4:0043  QUESTION ("Hardware Prefetcher")
+            4:0044  QUESTION ("Adjacent Cache Line Prefetch")
+            4:0045  QUESTION ("Max CPUID Value Limit")
+            4:0046  QUESTION ("Vanderpool Technology")
+            4:0047  QUESTION ("CPU TM function:")
+            4:0048  QUESTION ("Execute Disable Bit")
+            4:0049  QUESTION ("PECI")
+            4:0050  QUESTION ("Core Multi-Processing")
+            4:0051  SEPARATOR //blank line
+            4:0052  QUESTION ("Hyper Threading Technology")
+            4:0053  QUESTION ("Intel(R) SpeedStep(tm) tech.")
+            4:0054  QUESTION ("Intel(R) Dynamic Acceleration tech.")
+            4:0055  STATICTEXT ("Intel(R) C-State tech.")
+            4:0056  QUESTION ("    C1 Config.")
+            4:0057  QUESTION ("    C2 Config.")
+            4:0058  QUESTION ("    C3 Config.")
+            4:0059  QUESTION ("    C4 Config.")
+            4:0060  QUESTION ("    Hard C4 Config. ")
+        3:0061  MENUITEM ("NorthBridge Chipset Configuration")
+            4:0062  STATICTEXT ("NorthBridge Chipset Configuration")
+            4:0063  QUESTION ("DRAM Frequency")
+            4:0064  QUESTION ("Configure DRAM Timing by SPD")
+            4:0065  QUESTION ("  DRAM CAS# Latency")
+            4:0066  QUESTION ("  DRAM RAS# Precharge")
+            4:0067  QUESTION ("  DRAM RAS# to CAS# Delay")
+            4:0068  QUESTION ("  DRAM RAS# Activate to Precharge")
+            4:0069  QUESTION ("  DRAM Write Recovery Time")
+            4:0070  QUESTION ("Hyper Path 2")
+            4:0071  SEPARATOR //blank line
+            4:0072  QUESTION ("Booting Graphic Adapter Priority")
+            4:0073  QUESTION ("Pre-allocated Graphics Memory Size Select")
+            4:0074  SEPARATOR //blank line
+            4:0075  STATICTEXT ("PEG Port Configuration")
+            4:0076  SEPARATOR //single line
+            4:0077  QUESTION ("PEG Port")
+            4:0078  QUESTION ("  PEG Port VC1 Map")
+            4:0079  QUESTION ("  PEG Force x1")
+            4:0080  QUESTION ("PEG Buffer Length")
+            4:0081  SEPARATOR //blank line
+            4:0082  MENUITEM ("Video Function Configuration")
+                5:0083  STATICTEXT ("BIOS SETUP UTILITY")
+                5:0084  STATICTEXT ("Video Function Configuration")
+                5:0085  SEPARATOR //single line
+                5:0086  QUESTION ("DVMT Mode Select")
+                5:0087  QUESTION ("  DVMT/FIXED Memory")
+                5:0088  SEPARATOR //blank line
+                5:0089  QUESTION ("Boot Display Device")
+                5:0090  QUESTION ("Flat Panel Type")
+                5:0091  QUESTION ("Local Flat Panel Scaling")
+                5:0092  QUESTION ("TV Connector")
+                5:0093  QUESTION ("HDTV Output")
+                5:0094  QUESTION ("TV Standard")
+                5:0095  QUESTION ("TV Sub-Type")
+            4:0096  QUESTION ("TV Standard")
+            4:0097  QUESTION ("Active State Power-Management")
+        3:0098  MENUITEM ("South Bridge Chipset Configuration")
+            4:0099  STATICTEXT ("South Bridge Chipset Configuration")
+            4:0100  SEPARATOR //blank line
+            4:0101  QUESTION ("Onboard Audio")
+            4:0102  SEPARATOR //blank line
+            4:0103  STATICTEXT ("PCI-EX Ports Configuration")
+            4:0104  SEPARATOR //single line
+            4:0105  QUESTION ("VC1 for Azalia & Root Ports")
+        3:0106  MENUITEM ("General ACPI Configuration")
+            4:0107  STATICTEXT ("BIOS SETUP UTILITY")
+            4:0108  STATICTEXT ("ACPI Settings")
+            4:0109  SEPARATOR //single line
+            4:0110  MENUITEM ("General ACPI Configuration")
+                5:0111  STATICTEXT ("BIOS SETUP UTILITY")
+                5:0112  STATICTEXT ("General ACPI Configuration")
+                5:0113  SEPARATOR //single line
+                5:0114  QUESTION ("Suspend Mode")
+                5:0115  QUESTION ("Repost Video on S3 Resume")
+            4:0116  MENUITEM ("Advanced ACPI Configuration")
+                5:0117  STATICTEXT ("BIOS SETUP UTILITY")
+                5:0118  STATICTEXT ("Advanced ACPI Configuration")
+                5:0119  SEPARATOR //single line
+                5:0120  QUESTION ("ACPI 2.0 Support")
+                5:0121  QUESTION ("ACPI APIC support")
+                5:0122  QUESTION ("BIOS-->AML ACPI table")
+                5:0123  QUESTION ("Headless mode")
+                5:0124  QUESTION ("APIC ACPI SCI IRQ")
+                5:0125  QUESTION ("USB Device Wakeup From S3/S4")
+            4:0126  MENUITEM ("MPS Configuration")
+                5:0127  STATICTEXT ("BIOS SETUP UTILITY")
+                5:0128  STATICTEXT ("MPS Configuration")
+                5:0129  SEPARATOR //single line
+                5:0130  QUESTION ("MPS Revision")
+        3:0131  MENUITEM ("USB Configuration")
+            4:0132  STATICTEXT ("BIOS SETUP UTILITY")
+            4:0133  STATICTEXT ("USB Configuration")
+            4:0134  SEPARATOR //single line
+            4:0135  DYNAMICTEXT ("Module Version - ")
+            4:0136  SEPARATOR //blank line
+            4:0137  STATICTEXT ("USB Devices Enabled : ")
+            4:0138  DYNAMICTEXT ("  ")
+            4:0139  SEPARATOR //blank line
+            4:0140  QUESTION ("USB Ports")
+            4:0141  QUESTION ("Legacy USB Support")
+            4:0142  QUESTION ("USB 2.0 Controller")
+            4:0143  QUESTION ("USB 2.0 Controller Mode")
+            4:0144  QUESTION ("BIOS EHCI Hand-Off")
+            4:0145  SEPARATOR //blank line
+            4:0146  MENUITEM ("USB Mass Storage Device Configuration")
+                5:0147  STATICTEXT ("BIOS SETUP UTILITY")
+                5:0148  STATICTEXT ("USB Mass Storage Device Configuration")
+                5:0149  SEPARATOR //single line
+                5:0150  QUESTION ("USB Mass Storage Reset Delay")
+                5:0151  SEPARATOR //blank line
+                5:0152  DYNAMICTEXT ("   Device #1          ")
+                5:0153  QUESTION ("   Emulation Type")
+                5:0154  DYNAMICTEXT ("   Device #2          ")
+                5:0155  QUESTION ("   Emulation Type")
+                5:0156  DYNAMICTEXT ("   Device #3          ")
+                5:0157  QUESTION ("   Emulation Type")
+                5:0158  DYNAMICTEXT ("   Device #4          ")
+                5:0159  QUESTION ("   Emulation Type")
+                5:0160  DYNAMICTEXT ("   Device #5          ")
+                5:0161  QUESTION ("   Emulation Type")
+                5:0162  DYNAMICTEXT ("   Device #6          ")
+                5:0163  QUESTION ("   Emulation Type")
+        3:0164  MENUITEM ("Smbios Configuration")
+            4:0165  STATICTEXT ("Smbios Configuration Screen")
+            4:0166  STATICTEXT ("Smbios Configuration")
+            4:0167  SEPARATOR //blank line
+            4:0168  QUESTION ("Smbios Smi Support")
+        3:0169  SEPARATOR //blank line
+        3:0170  QUESTION ("IDE/SATA Mode")
+        3:0171  QUESTION ("IDE/SATA channels")
+    2:0172  SEPARATOR //blank line
+    2:0173  MENUITEM ("IDE/SATA Configuration")
+        3:0174  STATICTEXT ("BIOS SETUP UTILITY")
+        3:0175  STATICTEXT ("IDE Configuration")
+        3:0176  SEPARATOR //single line
+        3:0177  MENUITEM ("SATA Master      :")
+            4:0178  STATICTEXT ("BIOS SETUP UTILITY")
+            4:0179  STATICTEXT ("SATA Master")
+            4:0180  SEPARATOR //single line
+            4:0181  DYNAMICTEXT ("Device    :")
+            4:0182  DYNAMICTEXT ("Vendor    :")
+            4:0183  DYNAMICTEXT ("Size      :")
+            4:0184  SEPARATOR //single line
+            4:0185  QUESTION ("Type")
+        3:0186  MENUITEM ("IDE Master       :")
+            4:0187  STATICTEXT ("BIOS SETUP UTILITY")
+            4:0188  STATICTEXT ("IDE Master")
+            4:0189  SEPARATOR //single line
+            4:0190  DYNAMICTEXT ("Device    :")
+            4:0191  DYNAMICTEXT ("Vendor    :")
+            4:0192  DYNAMICTEXT ("Size      :")
+            4:0193  SEPARATOR //single line
+            4:0194  QUESTION ("Type")
+        3:0195  MENUITEM ("IDE Slave        :")
+            4:0196  STATICTEXT ("BIOS SETUP UTILITY")
+            4:0197  STATICTEXT ("IDE Slave")
+            4:0198  SEPARATOR //single line
+            4:0199  DYNAMICTEXT ("Device    :")
+            4:0200  DYNAMICTEXT ("Vendor    :")
+            4:0201  DYNAMICTEXT ("Size      :")
+            4:0202  SEPARATOR //single line
+            4:0203  QUESTION ("Type")
+    2:0204  SEPARATOR //blank line
+    2:0205  MENUITEM ("Onboard Devices Configuration")
+        3:0206  STATICTEXT ("BIOS SETUP UTILITY")
+        3:0207  STATICTEXT ("Onboard Device Configuration")
+        3:0208  SEPARATOR //single line
+        3:0209  QUESTION ("USB Ports")
+        3:0210  QUESTION ("Onboard LAN")
+        3:0211  QUESTION ("Onboard Audio")
+        3:0212  QUESTION ("Onboard WLAN")
+        3:0213  QUESTION ("Onboard Camera")
+        3:0214  QUESTION ("Onboard Speaker")
+        3:0215  QUESTION ("Onboard Bluetooth")
+        3:0216  QUESTION ("Onboard CardReader")
+    2:0217  SEPARATOR //blank line
+    2:0218  QUESTION ("CPU FSB Frequency")
+
+
+1:0219  MENUITEM ("Security")
+    2:0220  STATICTEXT ("BIOS SETUP UTILITY")
+    2:0221  STATICTEXT ("Security Settings")
+    2:0222  SEPARATOR //single line
+    2:0223  DYNAMICTEXT ("Supervisor Password :")
+    2:0224  DYNAMICTEXT ("User Password       :")
+    2:0225  SEPARATOR //blank line
+    2:0226  PASSWORDCONTROL ("Change Supervisor Password")
+    2:0227  QUESTION ("User Access Level")
+    2:0228  PASSWORDCONTROL ("Change User Password")
+    2:0229  MENUITEM ("Clear User Password")
+    2:0230  QUESTION ("Password Check")
+    2:0231  SEPARATOR //blank line
+
+
+1:0232  MENUITEM ("Boot")
+    2:0233  STATICTEXT ("BIOS SETUP UTILITY")
+    2:0234  STATICTEXT ("Boot Settings")
+    2:0235  SEPARATOR //single line
+    2:0236  MENUITEM ("Boot Device Priority")
+        3:0237  STATICTEXT ("BIOS SETUP UTILITY")
+        3:0238  STATICTEXT ("Boot Device Priority")
+        3:0239  SEPARATOR //single line
+        3:0240  QUESTION ("1st Boot Device")
+        3:0241  QUESTION ("2nd Boot Device")
+        3:0242  QUESTION ("3rd Boot Device")
+        3:0243  QUESTION ("4th Boot Device")
+        3:0244  QUESTION ("5th Boot Device")
+        3:0245  QUESTION ("6th Boot Device")
+        3:0246  QUESTION ("7th Boot Device")
+        3:0247  QUESTION ("8th Boot Device")
+        3:0248  QUESTION ("9th Boot Device")
+        3:0249  QUESTION ("10th Boot Device")
+        3:0250  QUESTION ("11th Boot Device")
+        3:0251  QUESTION ("12th Boot Device")
+    2:0252  MENUITEM ("Hard Disk Drives")
+        3:0253  STATICTEXT ("BIOS SETUP UTILITY")
+        3:0254  STATICTEXT ("Hard Disk Drives")
+        3:0255  SEPARATOR //single line
+        3:0256  QUESTION ("1st Drive")
+        3:0257  QUESTION ("2nd Drive")
+        3:0258  QUESTION ("3rd Drive")
+        3:0259  QUESTION ("4th Drive")
+        3:0260  QUESTION ("5th Drive")
+        3:0261  QUESTION ("6th Drive")
+        3:0262  QUESTION ("7th Drive")
+        3:0263  QUESTION ("8th Drive")
+        3:0264  QUESTION ("9th Drive")
+        3:0265  QUESTION ("10th Drive")
+        3:0266  QUESTION ("11th Drive")
+        3:0267  QUESTION ("12th Drive")
+    2:0268  MENUITEM ("Removable Drives")
+        3:0269  STATICTEXT ("BIOS SETUP UTILITY")
+        3:0270  STATICTEXT ("Removable Drives")
+        3:0271  SEPARATOR //single line
+        3:0272  QUESTION ("1st Drive")
+        3:0273  QUESTION ("2nd Drive")
+        3:0274  QUESTION ("3rd Drive")
+        3:0275  QUESTION ("4th Drive")
+    2:0276  MENUITEM ("CDROM Drives")
+        3:0277  STATICTEXT ("BIOS SETUP UTILITY")
+        3:0278  STATICTEXT ("CDROM Drives")
+        3:0279  SEPARATOR //single line
+        3:0280  QUESTION ("1st Drive")
+        3:0281  QUESTION ("2nd Drive")
+        3:0282  QUESTION ("3rd Drive")
+        3:0283  QUESTION ("4th Drive")
+    2:0284  SEPARATOR //blank line
+    2:0285  MENUITEM ("Boot Settings Configuration")
+        3:0286  STATICTEXT ("BIOS SETUP UTILITY")
+        3:0287  STATICTEXT ("Boot Settings Configuration")
+        3:0288  SEPARATOR //single line
+        3:0289  QUESTION ("Quick Boot")
+        3:0290  QUESTION ("Quiet Boot")
+    2:0291  SEPARATOR //blank line
+    2:0292  SEPARATOR //blank line
+    @2:0293  QUESTION ("Boot Booster")
+
+
+1:0294  MENUITEM ("Exit")
+    2:0295  STATICTEXT ("BIOS SETUP UTILITY")
+    2:0296  STATICTEXT ("Exit Options")
+    2:0297  SEPARATOR //single line
+    2:0298  MENUITEM ("Exit & Save Changes")
+    2:0299  MENUITEM ("Exit & Discard Changes")
+    2:0300  MENUITEM ("Discard Changes")
+    2:0301  SEPARATOR //blank line
+    2:0302  MENUITEM ("Load Setup Defaults")
+
