@@ -1,0 +1,72 @@
+AHCI									3&11583659 => bus 0
+-----------------------------------------------------------
+
+\Enum\PCIIDE\IDEChannel:
+
+	\4&28aee852&0&0 Primary IDE   [atapi] Driver 96A\0001
+	\4&28aee852&0&1 Secondary IDE [atapi] Driver 96A\0002
+
+\Class\96A: (HDC)
+
+    0000: intelide dev_266f 
+	0001: primary_ide    
+	0002: secondary_ide  
+	0003: iastor
+
+\Enum\IDE: (disks)
+
+	\DiskP3-128__________________________________HT3B22A3\4&c271567&0&0.0.0
+		ID: IDE\Disk\P3-128_HT3B22A3
+		Driver 967\0000
+
+	\DiskSILICONMOTION_SM223A____________________________\3532393739363931303536363235383131313535
+		ID: IDE\Disk\SILICONMOTION_SM223A
+		Driver 967\0001
+		
+\Enum\PCI\VEN_8086&DEV_2653&SUBSYS_26061043&REV_04\3&11583659&0&FA     (0:1F.2 SATA)	
+
+	Service iaStor
+	ParentIdPrefix 4&c271567&0
+	Driver 96A\0003
+	
+\Enum\PCI\VEN_8086&DEV_266F&SUBSYS_82D81043&REV_04\3&11583659&0&F9	   (0:1F.1 IDE)
+	
+	Service intelide
+	ParentIdPrefix 4&28aee852&0
+	Driver 96A\0000
+	
+\Services\Disk:	
+
+	\Enum Count=4 NextInstance=4
+		0 = IDE\DiskSILICONMOTION_SM223A____________________________\3532393739363931303536363235383131313535
+		1 = IDE\DiskP3-128__________________________________HT3B22A3\4&c271567&0&0.0.0
+	
+\Services\IntelIde:	
+
+	\Enum 0 = PCI\VEN_8086&DEV_266F&SUBSYS_82D81043&REV_04\3&11583659&0&F9
+	
+\Services\atapi:	
+
+	\Enum Count=2 NextInstance=2
+		0 = PCIIDE\IDEChannel\4&28aee852&0&0
+		1 = PCIIDE\IDEChannel\4&28aee852&0&1
+		
+\Services\iaStor:		
+		
+\Services\PartMgr:
+
+	\Enum Count=5		
+		0 = LEGACY_PARTMGR
+		1 = IDE\DiskSILICONMOTION_SM223A____________________________\3532393739363931303536363235383131313535
+		2 = IDE\DiskP3-128__________________________________HT3B22A3\4&c271567&0&0.0.0
+		
+		
+\Control\DeviceClasses\{53f56307-b6bf-11d0-94f2-00a0c91efb8b}
+	\##?#IDE#DiskP3-128__________________________________HT3B22A3#4&c271567&0&0.0.0#{53f56307-b6bf-11d0-94f2-00a0c91efb8b}]
+		DeviceInstance = IDE\DiskP3-128__________________________________HT3B22A3\4&c271567&0&0.0.0"
+
+		
+\Control\DeviceClasses\{53f56307-b6bf-11d0-94f2-00a0c91efb8b}
+	\##?#IDE#DiskSILICONMOTION_SM223A____________________________#3532393739363931303536363235383131313535#{53f56307-b6bf-11d0-94f2-00a0c91efb8b}]
+		DeviceInstance = IDE\DiskSILICONMOTION_SM223A____________________________\3532393739363931303536363235383131313535
+		

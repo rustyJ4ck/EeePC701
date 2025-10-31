@@ -1,0 +1,48 @@
+
+devcon stack IDE\DiskP3-128__________________________________HT3B22A3
+
+    Name: P3-128
+    Setup Class: {4D36E967-E325-11CE-BFC1-08002BE10318} DiskDrive
+    Class upper filters:
+        PartMgr
+    Controlling service:
+        disk
+
+
+// hex words little endian to ascii
+5039303433383031303632352034202020202020 => 9P40831060524 +6spaces (Serial 20 symbols)
+3532393739363931303536363235383131313535 => 25796919506652181155
+
+
+DiskP3-128__________________________________HT3B22A3\5039303433383031303632352034202020202020             
+                                                      
+  [ P3-128 (9P40831060524) ]                                         
+
+    ATA Device Properties:
+      Model ID                                          P3-128
+      Serial Number                                     9P40831060524
+      Revision                                          HT3B22A3
+      Device Type                                       SATA-III
+
+
+                                                                                                   
+DiskSILICONMOTION_SM223A____________________________\3532393739363931303536363235383131313535      
+
+  [ SILICONMOTION SM223AC (25796919506652181155) ]
+
+    ATA Device Properties:
+      Model ID                                          SILICONMOTION SM223AC
+      Serial Number                                     25796919506652181155
+      Revision                                          Unknown
+      Device Type                                       ATA-66
+
+
+
+30 -> '0'
+31 -> '1'	32 -> '2'
+35 -> '5'   36 -> '6' 
+37 -> '7'	38 -> '8'	
+39 -> '9'
+
+
+
