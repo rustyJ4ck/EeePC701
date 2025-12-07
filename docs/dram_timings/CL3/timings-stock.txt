@@ -1,0 +1,57 @@
+D:\bin\RwPortableV1.7\Rw.exe /Min /Nologo /Stdout /Command="r32 0xFED14110"
+D:\bin\RwPortableV1.7\Rw.exe /Min /Nologo /Stdout /Command="r32 0xFED14114"
+D:\bin\RwPortableV1.7\Rw.exe /Min /Nologo /Stdout /Command="r32 0xFED14118"
+D:\bin\RwPortableV1.7\Rw.exe /Min /Nologo /Stdout /Command="r32 0xFED14120"
+Memory timings
+----------------
+
+=== C0DRT0 === Address: 0x110 Value: 0x987820C8 1001 1000 0111 1000 0010 0000 1100 1000 
+
+  Bits 31:28   WTP   Write To Precharge Command Spacing (Same bank)           9 | 0x09 | 1001   5..13
+  Bits 27:24   WTR   Write To Read Command Spacing (Same rank)                8 | 0x08 | 1000   4..11
+  Bits 23:22   WRD   Write-Read Command Spacing (Different Rank)         1)  5 | 0x01 | 1      
+  Bits 21:20   RTW   Read-Write Command Spacing                          3)  6 | 0x03 | 11     
+  Bits 19:18   CCDw  Write Command Spacing                               2)  4 | 0x02 | 10     
+  Bits 16      CCDr  Read Command Spacing                                0)  6 | 0x00 | 0      5..6
+  Bits 15:11   RD    Read Delay                                               4 | 0x04 | 100    3..31
+  Bits 8:4     WR    Write Auto precharge to Activate (Same bank)            12 | 0x0C | 1100   4..19
+  Bits 3:0     RTP   Read Auto precharge to Activate (Same bank)              8 | 0x08 | 1000   
+
+=== C0DRT1 === Address: 0x114 Value: 0x0290D211 0000 0010 1001 0000 1101 0010 0001 0001 
+
+  Bits 29:28         tRTPC Read to Pre-charge BL/2                        0)  4 | 0x00 | 0      
+  Bits 23:20   RAS   Active to Precharge Delay                                9 | 0x09 | 1001   
+  Bits 17      RRD   Activate to activate delay (clk)                     0)  2 | 0x00 | 0      
+  Bits 16            tRPALL                                                   0 | 0x00 | 0      
+  Bits 15:11   RFC   Refresh Cycle Time                                      26 | 0x1A | 11010  3..31
+  Bits 9:8     CL    CAS Latency                                         2)  3 | 0x02 | 10     
+  Bits 6:4     RCD   RAS to CAS Delay                                     1)  3 | 0x01 | 1      
+  Bits 2:0     RP    Precharge to Activate Delay                          1)  3 | 0x01 | 1      
+
+=== C0DRT2 === Address: 0x118 Value: 0x80000230 1000 0000 0000 0000 0000 0010 0011 0000 
+
+  Bits 31:30         CKE Deassert Duration                                    2 | 0x02 | 10     
+  Bits 9:8     XPDN  Power Down Exit to CS# active time                       2 | 0x02 | 10     
+  Bits 7:5           DRAM Page Close Idle Timer                               1 | 0x01 | 1      
+  Bits 4:0           DRAM Power down Idle Timer                              16 | 0x10 | 10000  
+
+=== C0DRC0 === Address: 0x120 Value: 0x40000A06 0100 0000 0000 0000 0000 1010 0000 0110 
+
+  Bits 29      IC    Initialization Complete                              0)  N | 0x00 | 0      
+  Bits 27:24         Active SDRAM Ranks                                       0 | 0x00 | 0      
+  Bits 15            CMD copy enable (Single channel only)                    0 | 0x00 | 0      
+  Bits 10:8    RMS   Refresh Mode Select (RMS)                          2)  7.8 | 0x02 | 10     
+  Bits 6:4     SMD   Mode Select                                              0 | 0x00 | 0      
+  Bits 2       BL    Burst Length                                         1)  8 | 0x01 | 1      
+  Bits 1:0     DT    DRAM Type                                                2 | 0x02 | 10     
+
+-------------------------------------------------------------------------------------
+@ 200 MHz	3-3-3-9   (CL-RCD-RP-RAS) / 12-26-2-12-8-8  (RC-RFC-RRD-WR-WTR-RTP) 
+
+SPD Memory Timings	
+HYMP125S64CP8-S6
+@ 400 MHz	6-6-6-18  (CL-RCD-RP-RAS) / 24-51-3-6-3-3  (RC-RFC-RRD-WR-WTR-RTP)
+@ 333 MHz	5-5-5-15  (CL-RCD-RP-RAS) / 20-43-3-5-3-3  (RC-RFC-RRD-WR-WTR-RTP)
+@ 266 MHz	4-4-4-12  (CL-RCD-RP-RAS) / 16-34-2-4-2-2  (RC-RFC-RRD-WR-WTR-RTP)
+HYMP125S64CP8-Y5                           
+@ 200 MHz	3-3-3-9   (CL-RCD-RP-RAS) / 12-26-2-3-2-2  (RC-RFC-RRD-WR-WTR-RTP)

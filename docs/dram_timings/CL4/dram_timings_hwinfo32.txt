@@ -1,0 +1,68 @@
+HWiNFO® 32 Version 8.16-5600
+
+EEEPC ---------------------------------------------------------------------
+
+ [Current Computer]
+ [Operating System]
+
+Memory --------------------------------------------------------------------
+
+ [General Information]
+  Total Memory Size:                      2 GBytes
+  Total Memory Size [MB]:                 2048
+ [Current Performance Settings]
+  Maximum Supported Memory Clock:         200.0 MHz
+  Current Timing (tCAS-tRCD-tRP-tRAS):    6-9-9-15
+  Memory Channels Supported:              2
+  Read to Read Delay (tRDRD_DG/TrdrdScDlr) Different Bank Group: 5T
+  Write to Write Delay (tWRWR_DG/TwrwrScDlr) Different Bank Group: 3T
+  Read to Write Delay (tRDWR_SG/TrdwrScL) Same Bank Group: 6T
+  Write to Read Delay (tWRRD_SG/TwrrdScL) Same Bank Group: 15T
+  Write to Read Delay (tWRRD_DG/TwrrdScDlr) Different Bank Group: 3T
+  Read to Precharge Delay (tRTP):         4T
+  Write to Precharge Delay (tWTP):        26T
+  Write Recovery Time (tWR):              15T
+  Row Cycle Time (tRC):                   24T
+  Refresh Cycle Time (tRFC):              31T
+
+Row: 0 - 2 GB PC2-6400 DDR2-SDRAM SK Hynix HYMP125S64CP8-S6   -------------
+
+ [General Module Information]
+  Module Number:                          0
+  Module Size:                            2 GBytes
+  Memory Type:                            DDR2-SDRAM
+  Module Type:                            SO-DIMM
+  Error Check/Correction:                 None
+  Memory Speed:                           400.0 MHz (PC2-6400)
+  Module Manufacturer:                    SK Hynix
+  Module Part Number:                     HYMP125S64CP8-S6  
+  Module Serial Number:                   963641344
+  Module Manufacturing Date:              Year: 2008, Week: 43
+ [Module Characteristics]
+  Module Width:                           64-bits
+  Module Voltage:                         SSTL 1.8V
+  SPD Revision:                           1.2
+  Number Of Ranks:                        2
+  Row Address Bits:                       14
+  Column Address Bits:                    10
+  Number Of Banks:                        8
+ [Module timing]
+  Supported Burst Lengths:                4, 8
+  Refresh Rate:                           Reduced 0.5x (7.8 us)
+  Supported CAS Latencies (tCAS):         6.0, 5.0, 4.0
+  Min. RAS-to-CAS Delay (tRCD):           15.00 ns
+  Min. Row Precharge Time (tRP):          15.00 ns
+  Min. RAS Pulse Width (tRAS):            45 ns
+  Supported Module Timing at 400.0 MHz:   6.0-6-6-18
+  Supported Module Timing at 333.3 MHz:   5.0-5-5-15
+  Supported Module Timing at 266.7 MHz:   4.0-4-4-12
+  Min. Row-Activate To Row-Activate Delay (tRRD): 7.50 ns
+  Write Recovery Time (tWR):              15.00 ns
+  Internal write to read command delay (tWTR): 7.50 ns
+  Internal read to precharge command delay (tRTP): 7.50 ns
+  Minimum Activate to Activate/Refresh Time (tRC): 60.00 ns
+  Minimum Refresh to Activate/Refresh Command Period (tRFC): 127.50 ns
+  Address and Command Setup Time Before Clock (tIS): 0.17 ns
+  Address and Command Setup Time After Clock (tIH): 0.25 ns
+  Data Input Setup Time Before Strobe (tDS): 0.05 ns
+  Data Input Setup Time After Strobe (tDH): 0.12 ns

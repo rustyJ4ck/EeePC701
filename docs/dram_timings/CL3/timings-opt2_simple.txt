@@ -1,0 +1,48 @@
+EEEPC 701/900 DDR2 timings parser
+
+=== C0DRT0 === Address: 0x110 Value: 0x87FD1064 
+
+   WTP  8    Write To Precharge Command Spacing (Same bank)
+  WTR2  7    Write To Read Command Spacing (Same rank)
+   WRD  3    Write-Read Command Spacing (Different Rank) 
+   RTW  6    Read-Write Command Spacing 
+  CCDw  3    Write Command Spacing 
+  CCDr  5    Read Command Spacing 
+    RD  2    Read Delay
+  WTP2  6    Write Auto precharge to Activate (Same bank)
+   RTP  4    Read Auto precharge to Activate (Same bank)
+
+=== C0DRT1 === Address: 0x114 Value: 0x02609A11 
+
+  RTPC  4    Read to Pre-charge BL/2
+   RAS  6    Active to Precharge Delay
+   RRD  2    Activate to activate delay (clk)
+        0    tRPALL Pre-All to Activate Delay
+   RFC  19   Refresh Cycle Time
+    CL  3    CAS Latency 
+   RCD  3    RAS to CAS Delay
+    RP  3    Precharge to Activate Delay
+
+=== C0DRT2 === Address: 0x118 Value: 0x80000150 
+
+        3    CKE Deassert Duration
+  XPDN  1    Power Down Exit to CS# active time 
+        16   DRAM Page Close Idle Timer
+        16   DRAM Power down Idle Timer
+
+=== C0DRC0 === Address: 0x120 Value: 0x60000906 
+
+    IC  Y    Initialization Complete
+        0    Active SDRAM Ranks
+        0    CMD copy enable (Single channel only)
+   RMS  15.6 Refresh Mode Select (RMS)
+   SMD  0    Mode Select
+    BL  8    Burst Length
+    DT  2    DRAM Type
+
+-------------------------------------------------------------------------------------
+@ 200 MHz	3-3-3-6   (CL-RCD-RP-RAS) /  9-19-2-3-2-4  (RC-RFC-RRD-WR-WTR-RTP) 
+
+
+HYMP125S64CP8-Y5 SPD Memory Timings	                           
+@ 200 MHz	3-3-3-9   (CL-RCD-RP-RAS) / 12-26-2-3-2-2  (RC-RFC-RRD-WR-WTR-RTP)

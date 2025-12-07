@@ -1,0 +1,77 @@
+
+
+--------[ SPD ]---------------------------------------------------------------------------------------------------------
+
+  [ DIMM1: Hynix HYMP125S64CP8-Y5 ]
+
+    Memory Module Properties:
+      Module Name                                       Hynix HYMP125S64CP8-Y5
+      Serial Number                                     00007118h (410058752)
+      Manufacture Date                                  Week 23 / 2008
+      Module Size                                       2 GB (2 ranks, 8 banks)
+      Module Type                                       SO-DIMM
+      Memory Type                                       DDR2 SDRAM
+      Memory Speed                                      DDR2-667 (333 MHz)
+      Module Width                                      64 bit
+      Module Voltage                                    SSTL 1.8
+      Error Detection Method                            None
+      Refresh Rate                                      Reduced (7.8 us), Self-Refresh
+
+    Memory Timings:
+      @ 333 MHz                                         5-5-5-15  (CL-RCD-RP-RAS) / 20-43-3-5-3-3  (RC-RFC-RRD-WR-WTR-RTP)
+      @ 266 MHz                                         4-4-4-12  (CL-RCD-RP-RAS) / 16-34-2-4-2-2  (RC-RFC-RRD-WR-WTR-RTP)
+      @ 200 MHz                                         3-3-3-9  (CL-RCD-RP-RAS) / 12-26-2-3-2-2  (RC-RFC-RRD-WR-WTR-RTP)
+
+    Memory Module Features:
+      Analysis Probe                                    Not Present
+      FET Switch External                               Disabled
+      Weak Driver                                       Supported
+
+    Memory Module Manufacturer:
+      Company Name                                      Hynix Semiconductor Inc.
+      Product Information                               http://www.hynix.com/gl/products
+
+
+---------- hwinfo32
+
+Row: 0 - 2 GB PC2-5300 DDR2-SDRAM SK Hynix HYMP125S64CP8-Y5   -------------
+
+ [General Module Information]
+  Module Number:                          0
+  Module Size:                            2 GBytes
+  Memory Type:                            DDR2-SDRAM
+  Module Type:                            SO-DIMM
+  Error Check/Correction:                 None
+  Memory Speed:                           333.3 MHz (PC2-5300)
+  Module Manufacturer:                    SK Hynix
+  Module Part Number:                     HYMP125S64CP8-Y5  
+  Module Serial Number:                   410058752
+  Module Manufacturing Date:              Year: 2008, Week: 23
+ [Module Characteristics]
+  Module Width:                           64-bits
+  Module Voltage:                         SSTL 1.8V
+  SPD Revision:                           1.2
+  Number Of Ranks:                        2
+  Row Address Bits:                       14
+  Column Address Bits:                    10
+  Number Of Banks:                        8
+ [Module timing]
+  Supported Burst Lengths:                4, 8
+  Refresh Rate:                           Reduced 0.5x (7.8 us)
+  Supported CAS Latencies (tCAS):         5.0, 4.0, 3.0
+  Min. RAS-to-CAS Delay (tRCD):           15.00 ns
+  Min. Row Precharge Time (tRP):          15.00 ns
+  Min. RAS Pulse Width (tRAS):            45 ns
+  Supported Module Timing at 333.3 MHz:   5.0-5-5-15
+  Supported Module Timing at 266.7 MHz:   4.0-4-4-12
+  Supported Module Timing at 200.0 MHz:   3.0-3-3-9
+  Min. Row-Activate To Row-Activate Delay (tRRD): 7.50 ns
+  Write Recovery Time (tWR):              15.00 ns
+  Internal write to read command delay (tWTR): 7.50 ns
+  Internal read to precharge command delay (tRTP): 7.50 ns
+  Minimum Activate to Activate/Refresh Time (tRC): 60.00 ns
+  Minimum Refresh to Activate/Refresh Command Period (tRFC): 127.50 ns
+  Address and Command Setup Time Before Clock (tIS): 0.20 ns
+  Address and Command Setup Time After Clock (tIH): 0.27 ns
+  Data Input Setup Time Before Strobe (tDS): 0.10 ns
+  Data Input Setup Time After Strobe (tDH): 0.17 ns
