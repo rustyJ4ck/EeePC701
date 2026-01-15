@@ -1,0 +1,32 @@
+FSB >110 MHz system hangs if PCIe <=100   // FSB > 110 rule  FSB = PCIe + 10  // STEP += 3 MHz
+
+PCIe overclock >110MHz results:
+ - keyboard fail
+ - wireless lost 
+
+OC Results: (with setfsb)
+--
+
+FSB/PCIe
+
+1044 MHz: 116/105 good
+1053 MHz: 117/105 hangs
+1071 MHz: 119/109 works
+
+1080 MHz: 120/110 good
+1089 MHz: 121/110 pretty stable                            eeectl: stable					<-- okay for daily usage
+
+1098 MHZ: 122/110 seems good, stresses passed              eeectl: hangs on 122 
+          123/110 hangs
+
+1107 MHz: FSB 123 PCI 117  works / problems with keyboard / wireless
+          FSB 125 PCI 117  prime95 fail 
+
+
+
+
+eeectl example config 
+; notice PCIe increase around FSB 110 -> this is crucial.
+----
+
+Speed.Profiles = 70,99,0,Suspend; 70,99,0,Stock; 71,99; 72,99; 73,99; 74,99; 75,99; 76,100; 77,100; 78,100; 79,100; 80,100; 81,100; 82,100; 83,100; 84,100; 85,100,0,Medium; 86,100; 87,100; 88,100; 89,100; 90,100; 91,100; 92,100; 93,100; 94,100; 95,100; 96,100; 97,100; 98,100; 99,100; 100,100,1,Full; 101,100; 102,100; 103,100; 104,100; 105,100; 106,100; 107,100; 108,100; 109,100; 110,101,1,Overdrive; 110,103; 111,103; 112,105; 113,105; 114,107; 115,107; 116,109; 117,109; 118,109; 120,110; 121,110,1,F121_P110;
