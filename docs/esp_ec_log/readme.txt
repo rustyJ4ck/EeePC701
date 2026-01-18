@@ -1,0 +1,1 @@
+Reading EC KB 3310 debug output via serial connection to D1 Mini (esp 8266) 
