@@ -1,6 +1,6 @@
 
 ### Overclock EeePC 701/900 linux utility
-Bash script to overclock EeePC CPU (Celeron M 353 ULV 900 MHz). Using i2c-dev module to contact PLL chip (root required). Downclock also supported.
+Bash script to overclock EeePC CPU (Celeron M 353 ULV 900 MHz). Using i2c-dev module to talk to PLL chip (root required). 
 
 Stock laptop should be stable up to around 120 MHz FSB (1080 MHz).
 With little bit voltmod you can reach FSB 133 MHz (~1200 Mhz) and even more.
