@@ -1,0 +1,10 @@
+#!/bin/sh
+
+devmem2 0xFED14110 w 0x87FD1064
+devmem2 0xFED14114 w 0x02609A11
+devmem2 0xFED14118 w 0x80000150
+devmem2 0xFED14120 w 0x60000906 
+
+sleep 1
+devmem2 0xFED14114
+
