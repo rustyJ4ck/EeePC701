@@ -1,0 +1,64 @@
+kernel boot parameters to improve stability
+
+# Overclocking stability (kernel options combined):
+GRUB_CMDLINE_LINUX: clocksource=acpi_pm nohz=off highres=off pcie_aspm=off intel_pstate=disable i915.enable_psr=0 i915.enable_rc6=0 i915.enable_dc=0 i915.disable_power_well=0 i915.reset=1 i915.enable_hangcheck=1 i915.powersave=0
+
+
+
+
+CPU
+===
+
+# grub config
+# Windows-like timing environment:
+clocksource=acpi_pm   # Stable timer like Windows
+nohz=off              # Periodic interrupts like XP
+highres=off           # Lower timer resolution
+pcie_aspm=off         # No PCIe power management
+
+# Stable performance profile:
+intel_pstate=disable  # Simple frequency control
+nowatchdog            # Don't panic on temporary hangs
+mce=ignore_ce         # Don't log corrected errors
+
+GPU
+===
+
+Edit /etc/default/grub and add the options to the GRUB_CMDLINE_LINUX line, then run sudo update-grub.
+
+# Disable clock gating and power management
+i915.enable_rc6=0
+i915.enable_dc=0
+i915.disable_power_well=0
+
+# Set the GPU to maximum frequency and lock it
+i915.enable_pps=0
+i915.use_mmio_flip=0
+
+# Disable panel self-refresh (if using LCD)
+i915.enable_psr=0
+
+# Force a specific GPU frequency (if supported)
+i915.enable_fbc=0
+i915.lvds_downclock=0
+
+# More aggressive: disable vsync and other features
+i915.semaphores=1
+i915.enable_hangcheck=0
+
+
+intel_idle.max_cstate=1	Restricts the processor from entering deep power-saving "sleep" modes. 
+						This prevents the GPU from losing power during the brief idle period when a game closes.
+						Note: The intel_idle driver typically targets Core-series processors (Nehalem and newer) fall back to the generic acpi_idle driver.
+
+i915.enable_psr=0		Disables Panel Self Refresh. PSR can cause hangs on exit when the driver attempts to hand control back to the desktop compositor.
+						PSR stops the GPU from constantly sending identical image data to the screen when the display is static (still images like desktop)
+						PSR is a frequent source of "micro-freezes," flickering, and full system hangs on Intel integrated graphics.
+						Disabling PSR can 100% resolve random freezes and graphical glitches (like "FIFO underruns") on many Intel systems.
+
+eee701:
+i915: unknown parameter 'enable_rc6' ignored
+i915: unknown parameter 'powersave' ignored
+
+# i915.reset=1 i915.enable_hangcheck=1
+

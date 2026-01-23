@@ -1,0 +1,3 @@
+#!/bin/sh
+
+sudo intel_reg write 209C 00400240 2120 02206A00 2124 02000180
