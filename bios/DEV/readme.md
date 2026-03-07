@@ -3,8 +3,9 @@
 This firmware version is designed for TESTING purposes only. There are no guarantees whatsoever; use it at your own risk.
 
 > [!CAUTION]
-> I was informed that the firmware can break the device (the Eee 900 does not wake up after going into sleep mode).
-> Be sure to disable windows XP sleep mode if you want try this firmware.
+> I Don't recommend using this BIOS for now! It's here for testing.
+> Some fuctions does not work correctly when BCLK133 mode selected.
+> Required CMOS reset to boot after power off. SATA drives stop working correctly due to pcie overclock.
 
 Currently testing proper BCLK 133 MHz overclocking (via bootblock) before MRC code trains the MCH/DRAM and system acknowledge 133 MHz bus. 
 
